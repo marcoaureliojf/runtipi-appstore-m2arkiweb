@@ -1,0 +1,47 @@
+version: "3.9"
+services:
+  invokeai: # Should be exact same name as "id" field in config.json
+    container_name: invokeai # Should be exact same name as "id" field in config.json
+    image: ghcr.io/invoke-ai/invokeai # Try to avoid "latest" tag. As it may break configs in the future.
+    restart: unless-stopped # Do not change this
+    environment:
+      - TZ=${TZ} # Can use any env variable. See "environment variables" section in the docs
+    volumes:
+      - ${APP_DATA_DIR}/data/invokeai:/invokeai # Always start the path with ${APP_DATA_DIR}/data/. This will put all data inside app-data/my-app/data
+    ports:
+      - ${APP_PORT}:9090
+    networks:
+      - tipi_main_network
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities:
+                - gpu
+    labels: # Use your editors search and replace feature to replace all instances of "myapp" with your app name in the traefik labels
+      # Main
+      traefik.enable: true
+      traefik.http.middlewares.invokeai-web-redirect.redirectscheme.scheme: https
+      traefik.http.services.invokeai.loadbalancer.server.port: 9090 # Should be the same as the app internal port so for this example 9443
+      # Web
+      traefik.http.routers.invokeai-insecure.rule: Host(`${APP_DOMAIN}`)
+      traefik.http.routers.invokeai-insecure.entrypoints: web
+      traefik.http.routers.invokeai-insecure.service: invokeai
+      traefik.http.routers.invokeai-insecure.middlewares: invokeai-web-redirect
+      # Websecure
+      traefik.http.routers.invokeai.rule: Host(`${APP_DOMAIN}`)
+      traefik.http.routers.invokeai.entrypoints: websecure
+      traefik.http.routers.invokeai.service: invokeai
+      traefik.http.routers.invokeai.tls.certresolver: myresolver
+      # Local domain
+      traefik.http.routers.invokeai-local-insecure.rule: Host(`invokeai.${LOCAL_DOMAIN}`)
+      traefik.http.routers.invokeai-local-insecure.entrypoints: web
+      traefik.http.routers.invokeai-local-insecure.service: invokeai
+      traefik.http.routers.invokeai-local-insecure.middlewares: invokeai-web-redirect
+      # Local domain secure
+      traefik.http.routers.invokeai-local.rule: Host(`invokeai.${LOCAL_DOMAIN}`)
+      traefik.http.routers.invokeai-local.entrypoints: websecure
+      traefik.http.routers.invokeai-local.service: invokeai
+      traefik.http.routers.invokeai-local.tls: true

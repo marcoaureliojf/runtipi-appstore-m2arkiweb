@@ -1,0 +1,18 @@
+{
+    "name": "InvokeAi",
+    "id": "invokeai",
+    "available": true,
+    "short_desc": "Professional Creative AI Tools for Visual Media",
+    "author": "InvokeAi",
+    "port": 9090,
+    "categories": ["development", "ai"],
+    "description": "Invoke is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The solution offers an industry leading WebUI, and serves as the foundation for multiple commercial products.",
+    "tipi_version": 1,
+    "version": "v5.5.0",
+    "source": "https://github.com/invoke-ai/InvokeAI",
+    "website": "https://invoke-ai.github.io/InvokeAI/",
+    "exposable": true,
+    "supported_architectures": ["arm64", "amd64"],
+    "created_at": 1724134338800,
+    "updated_at": 1724134338800
+  }
