@@ -7,9 +7,9 @@ services:
     environment:
       - TZ=${TZ} # Can use any env variable. See "environment variables" section in the docs
       # You must change these. Replace `postiz.your-server.com` with your DNS name - what your web browser sees.
-      # MAIN_URL= "https://postiz.your-server.com"
-      # FRONTEND_URL= "https://postiz.your-server.com"
-      # NEXT_PUBLIC_BACKEND_URL= "https://postiz.your-server.com/api"
+      - MAIN_URL= Host(`postiz.${LOCAL_DOMAIN}`)
+      - FRONTEND_URL= Host(`postiz.${LOCAL_DOMAIN}`)
+      - NEXT_PUBLIC_BACKEND_URL= Host(`postiz.${LOCAL_DOMAIN}`)/api
       - JWT_SECRET=pL^$#6MXDM%x5hXPzr2%XD6Md
  
       # These defaults are probably fine, but if you change your user/password, update it in the
