@@ -7,9 +7,9 @@ services:
     environment:
       - TZ=${TZ} # Can use any env variable. See "environment variables" section in the docs
       # You must change these. Replace `postiz.your-server.com` with your DNS name - what your web browser sees.
-      - MAIN_URL=${APP_PROTOCOL:-http}://${APP_DOMAIN}/
-      - FRONTEND_URL=${APP_PROTOCOL:-http}://${APP_DOMAIN}/
-      - NEXT_PUBLIC_BACKEND_URL=${APP_PROTOCOL:-http}://${APP_DOMAIN}/api
+      #- MAIN_URL=${APP_PROTOCOL:-http}://${APP_DOMAIN}/
+      #- FRONTEND_URL=${APP_PROTOCOL:-http}://${APP_DOMAIN}/
+      #- NEXT_PUBLIC_BACKEND_URL=${APP_PROTOCOL:-http}://${APP_DOMAIN}/api
       - JWT_SECRET= #"random string that is unique to every install - just type random characters here!"
  
       # These defaults are probably fine, but if you change your user/password, update it in the
