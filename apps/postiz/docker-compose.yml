@@ -6,10 +6,10 @@ services:
     restart: unless-stopped # Do not change this
     environment:
       - TZ=${TZ} # Can use any env variable. See "environment variables" section in the docs
-      # You must change these. Replace `postiz.your-server.com` with your DNS name - what your web browser sees.
-      - MAIN_URL= postiz.${LOCAL_DOMAIN}
-      - FRONTEND_URL= postiz.${LOCAL_DOMAIN}
-      - NEXT_PUBLIC_BACKEND_URL= postiz.${LOCAL_DOMAIN}/api
+      # You must change these. Replace `postiz.your-server.com` with your DNS name or "localhost:port" - what your web browser sees.
+      - MAIN_URL=postiz.${LOCAL_DOMAIN}
+      - FRONTEND_URL=postiz.${LOCAL_DOMAIN}
+      - NEXT_PUBLIC_BACKEND_URL=postiz.${LOCAL_DOMAIN}/api
       - JWT_SECRET=pL^$#6MXDM%x5hXPzr2%XD6Md
  
       # These defaults are probably fine, but if you change your user/password, update it in the
