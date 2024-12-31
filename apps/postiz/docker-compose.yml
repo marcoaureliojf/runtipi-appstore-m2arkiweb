@@ -10,14 +10,14 @@ services:
       # MAIN_URL= "https://postiz.your-server.com"
       # FRONTEND_URL= "https://postiz.your-server.com"
       # NEXT_PUBLIC_BACKEND_URL= "https://postiz.your-server.com/api"
-        JWT_SECRET= "pL^$#6MXDM%x5hXPzr2%XD6Md"
+        JWT_SECRET=pL^$#6MXDM%x5hXPzr2%XD6Md
  
       # These defaults are probably fine, but if you change your user/password, update it in the
       # postiz-postgres or postiz-redis services below.
         DATABASE_URL=postgresql://postiz-user:postiz-password@postiz-postgres:5432/postiz-db-local
         REDIS_URL=redis://postiz-redis:6379
         BACKEND_INTERNAL_URL=http://localhost:3000
-        IS_GENERAL= "true" # Required for self-hosting.
+        IS_GENERAL=true # Required for self-hosting.
       # The container images are pre-configured to use /uploads for file storage.
       # You probably should not change this unless you have a really good reason!
         STORAGE_PROVIDER=local
