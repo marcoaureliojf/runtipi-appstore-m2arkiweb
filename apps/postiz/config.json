@@ -1,0 +1,17 @@
+{
+    "name": "Postiz",
+    "id": "postiz",
+    "available": true,
+    "short_desc": "Ultimate social media scheduling tool!",
+    "author": "Gitroom",
+    "port": 5000,
+    "categories": ["automation", "social"],
+    "description": "📨 The ultimate social media scheduling tool, with a bunch of AI 🤖",
+    "tipi_version": 1,
+    "version": "v1.17.1",
+    "source": "https://github.com/gitroomhq/postiz-app",
+    "exposable": true,
+    "supported_architectures": ["arm64", "amd64"],
+    "created_at": 1724134338800,
+    "updated_at": 1724134338800
+  }
