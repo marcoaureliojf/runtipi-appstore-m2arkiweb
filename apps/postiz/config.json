@@ -11,7 +11,15 @@
     "version": "v1.17.1",
     "source": "https://github.com/gitroomhq/postiz-app",
     "exposable": true,
-    "https": true,
+    "form_fields": [
+      {
+        "type": "text",
+        "label": "Postiz main domain (postiz.your-server.com)",
+        "placeholder": "postiz.your-server.com",
+        "required": true,
+        "env_variable": "POSTIZ_DOMAIN"
+      }
+    ],
     "supported_architectures": ["arm64", "amd64"],
     "created_at": 1724134338800,
     "updated_at": 1724134338800
