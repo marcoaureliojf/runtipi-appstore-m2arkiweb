@@ -1,5 +1,5 @@
 {
-    "name": "Enfugue-CUDA",
+    "name": "Enfugue - Nvidia",
     "id": "enfugue",
     "available": true,
     "short_desc": "Make studio-grade images and video using generative AI.",
