@@ -18,6 +18,12 @@
         "placeholder": "https://postiz.your-server.com",
         "required": true,
         "env_variable": "POSTIZ_DOMAIN"
+      },
+      {
+        "type": "random",
+        "label": "JWT_SECRET",
+        "min": 50,
+        "env_variable": "JWT_SECRET_KEY"
       }
     ],
     "supported_architectures": ["arm64", "amd64"],

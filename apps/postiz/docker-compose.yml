@@ -10,7 +10,7 @@ services:
       - MAIN_URL=${POSTIZ_DOMAIN}
       - FRONTEND_URL=${POSTIZ_DOMAIN}
       - NEXT_PUBLIC_BACKEND_URL=${POSTIZ_DOMAIN}/api
-      - JWT_SECRET=KwW79KNSJEQ44TJwwbi8XT09caIRPdGqfDyxLbvED8LxBtJRaO #"random string that is unique to every install - just type random characters here!"
+      - JWT_SECRET=${JWT_SECRET_KEY} #"random string that is unique to every install - just type random characters here!"
  
       # These defaults are probably fine, but if you change your user/password, update it in the
       # postiz-postgres or postiz-redis services below.
