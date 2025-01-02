@@ -14,8 +14,8 @@
     "form_fields": [
       {
         "type": "text",
-        "label": "Postiz main domain (postiz.your-server.com)",
-        "placeholder": "postiz.your-server.com",
+        "label": "You must change these. Replace `postiz.your-server.com` with your DNS name - what your web browser sees.",
+        "placeholder": "https://postiz.your-server.com",
         "required": true,
         "env_variable": "POSTIZ_DOMAIN"
       }
