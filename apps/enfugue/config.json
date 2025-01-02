@@ -1,0 +1,17 @@
+{
+    "name": "Enfugue-CUDA",
+    "id": "enfugue",
+    "available": true,
+    "short_desc": "Make studio-grade images and video using generative AI.",
+    "author": "painebenjamin",
+    "port": 45554,
+    "categories": ["development", "ai"],
+    "description": "ENFUGUE is an open-source web app for making studio-grade images and video using generative AI.",
+    "tipi_version": 1,
+    "version": "v0.3.3",
+    "source": "https://github.com/painebenjamin/app.enfugue.ai",
+    "exposable": true,
+    "supported_architectures": ["arm64", "amd64"],
+    "created_at": 1724134338800,
+    "updated_at": 1724134338800
+  }

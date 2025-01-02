@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  my-app: # Should be exact same name as "id" field in config.json
+    container_name: enfugue # Should be exact same name as "id" field in config.json
+    image: ghcr.io/painebenjamin/app.enfugue.ai:0.3.3 # Try to avoid "latest" tag. As it may break configs in the future.
+    restart: unless-stopped # Do not change this
+    environment:
+      - TZ=${TZ} # Can use any env variable. See "environment variables" section in the docs
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config # Always start the path with ${APP_DATA_DIR}/data/. This will put all data inside app-data/my-app/data
+      - ${APP_DATA_DIR}/data/projects:/projects
+    ports:
+      - ${APP_PORT}:45554
+    networks:
+      - tipi_main_network # That should not be changed
+    labels: # Use your editors search and replace feature to replace all instances of "enfugue" with your app name in the traefik labels
+      # Main
+      traefik.enable: true
+      traefik.http.middlewares.enfugue-web-redirect.redirectscheme.scheme: https
+      traefik.http.services.enfugue.loadbalancer.server.port: 45554 # Should be the same as the app internal port so for this example 9443
+      # Web
+      traefik.http.routers.enfugue-insecure.rule: Host(`${APP_DOMAIN}`)
+      traefik.http.routers.enfugue-insecure.entrypoints: web
+      traefik.http.routers.enfugue-insecure.service: enfugue
+      traefik.http.routers.enfugue-insecure.middlewares: enfugue-web-redirect
+      # Websecure
+      traefik.http.routers.enfugue.rule: Host(`${APP_DOMAIN}`)
+      traefik.http.routers.enfugue.entrypoints: websecure
+      traefik.http.routers.enfugue.service: enfugue
+      traefik.http.routers.enfugue.tls.certresolver: myresolver
+      # Local domain
+      traefik.http.routers.enfugue-local-insecure.rule: Host(`enfugue.${LOCAL_DOMAIN}`)
+      traefik.http.routers.enfugue-local-insecure.entrypoints: web
+      traefik.http.routers.enfugue-local-insecure.service: enfugue
+      traefik.http.routers.enfugue-local-insecure.middlewares: enfugue-web-redirect
+      # Local domain secure
+      traefik.http.routers.enfugue-local.rule: Host(`enfugue.${LOCAL_DOMAIN}`)
+      traefik.http.routers.enfugue-local.entrypoints: websecure
+      traefik.http.routers.enfugue-local.service: enfugue
+      traefik.http.routers.enfugue-local.tls: true
