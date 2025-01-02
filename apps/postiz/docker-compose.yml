@@ -30,7 +30,7 @@ services:
       - ${APP_PORT}:5000
     networks:
       - postiz-network # That should not be changed     
-    labels: 
+    #labels: 
       # Use your editors search and replace feature to replace all instances of "postiz" with your app name in the traefik labels
       # Main
       #traefik.enable: true
