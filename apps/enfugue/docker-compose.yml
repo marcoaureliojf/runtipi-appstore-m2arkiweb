@@ -9,9 +9,9 @@ services:
       - ENFUGUE_SERVER_HOST=${APP_DOMAIN}
       - ENFUGUE_SERVER_PORT=${APP_PORT}
       - ENFUGUE_SERVER_DOMAIN=enfugue.${LOCAL_DOMAIN}
-      - SERVER_SECURE=0             # Optional
-    volumes:
-      - ${APP_DATA_DIR}/data/opt:/opt/enfugue # Always start the path with ${APP_DATA_DIR}/data/. This will put all data inside app-data/my-app/data
+      - SERVER_SECURE=True             # Optional
+    #volumes:
+    #  - ${APP_DATA_DIR}/data/opt:/opt/enfugue # Always start the path with ${APP_DATA_DIR}/data/. This will put all data inside app-data/my-app/data
     ports:
       - 45554:45554
       - 45555:45555

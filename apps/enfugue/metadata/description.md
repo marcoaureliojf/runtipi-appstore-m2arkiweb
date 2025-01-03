@@ -1,3 +1,18 @@
+## Nvidia Instructions
+
+To enable your Nvidia GPU in Docker:
+
+- You need to install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installation)
+
+- And configure Docker to use Nvidia driver
+
+```sh
+sudo nvidia-ctk runtime configure --runtime=docker
+sudo systemctl restart docker
+```
+
+---
+
 <p align="center">
     <img src="https://user-images.githubusercontent.com/57536852/297959777-1ba4ae57-6309-447f-b1f1-0b3331e6f347.gif" alt="ENFUGUE Web UI v0.3.3">
 </p>
