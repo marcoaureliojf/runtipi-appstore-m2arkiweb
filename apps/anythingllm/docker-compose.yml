@@ -1,0 +1,40 @@
+version: '3.9'
+services:
+  my-app: # Should be exact same name as "id" field in config.json
+    container_name: anythingllm # Should be exact same name as "id" field in config.json
+    image: mintplexlabs/anythingllm # Try to avoid "latest" tag. As it may break configs in the future.
+    restart: unless-stopped # Do not change this
+    environment:
+      - TZ=${TZ} # Can use any env variable. See "environment variables" section in the docs
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config # Always start the path with ${APP_DATA_DIR}/data/. This will put all data inside app-data/my-app/data
+      - ${APP_DATA_DIR}/data/projects:/projects
+    ports:
+      - ${APP_PORT}:3001
+    networks:
+      - tipi_main_network # That should not be changed
+    labels: # Use your editors search and replace feature to replace all instances of "anythingllm" with your app name in the traefik labels
+      # Main
+      traefik.enable: true
+      traefik.http.middlewares.anythingllm-web-redirect.redirectscheme.scheme: https
+      traefik.http.services.anythingllm.loadbalancer.server.port: 3001
+      # Web
+      traefik.http.routers.anythingllm-insecure.rule: Host(`${APP_DOMAIN}`)
+      traefik.http.routers.anythingllm-insecure.entrypoints: web
+      traefik.http.routers.anythingllm-insecure.service: anythingllm
+      traefik.http.routers.anythingllm-insecure.middlewares: anythingllm-web-redirect
+      # Websecure
+      traefik.http.routers.anythingllm.rule: Host(`${APP_DOMAIN}`)
+      traefik.http.routers.anythingllm.entrypoints: websecure
+      traefik.http.routers.anythingllm.service: anythingllm
+      traefik.http.routers.anythingllm.tls.certresolver: myresolver
+      # Local domain
+      traefik.http.routers.anythingllm-local-insecure.rule: Host(`anythingllm.${LOCAL_DOMAIN}`)
+      traefik.http.routers.anythingllm-local-insecure.entrypoints: web
+      traefik.http.routers.anythingllm-local-insecure.service: anythingllm
+      traefik.http.routers.anythingllm-local-insecure.middlewares: anythingllm-web-redirect
+      # Local domain secure
+      traefik.http.routers.anythingllm-local.rule: Host(`anythingllm.${LOCAL_DOMAIN}`)
+      traefik.http.routers.anythingllm-local.entrypoints: websecure
+      traefik.http.routers.anythingllm-local.service: anythingllm
+      traefik.http.routers.anythingllm-local.tls: true

@@ -1,0 +1,17 @@
+{
+    "name": "Anythingllm",
+    "id": "anythingllm",
+    "available": true,
+    "short_desc": "The all-in-one AI application",
+    "author": "Mintplex Labs",
+    "port": 9091,
+    "categories": ["development", "ai"],
+    "description": "Everything great about AI in one desktop application. Chat with docs, use AI Agents, and more - full locally and offline.",
+    "tipi_version": 1,
+    "version": "v1.4.0",
+    "source": "https://github.com/Mintplex-Labs/anything-llm",
+    "exposable": true,
+    "supported_architectures": ["arm64", "amd64"],
+    "created_at": 1738541029,
+    "updated_at": 1738541029
+  }
