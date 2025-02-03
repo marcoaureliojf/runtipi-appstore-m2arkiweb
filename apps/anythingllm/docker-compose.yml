@@ -13,6 +13,14 @@ services:
       - ${APP_PORT}:3001
     networks:
       - tipi_main_network # That should not be changed
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities:
+                - gpu  
     labels: # Use your editors search and replace feature to replace all instances of "anythingllm" with your app name in the traefik labels
       # Main
       traefik.enable: true
