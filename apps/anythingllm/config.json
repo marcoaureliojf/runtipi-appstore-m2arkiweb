@@ -4,7 +4,7 @@
     "available": true,
     "short_desc": "The all-in-one AI application",
     "author": "Mintplex Labs",
-    "port": 9091,
+    "port": 9092,
     "categories": ["development", "ai"],
     "description": "Everything great about AI in one desktop application. Chat with docs, use AI Agents, and more - full locally and offline.",
     "tipi_version": 1,

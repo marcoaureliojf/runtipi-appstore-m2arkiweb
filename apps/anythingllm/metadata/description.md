@@ -1,0 +1,149 @@
+<a name="readme-top"></a>
+
+<p align="center">
+  <a href="https://anythingllm.com"><img src="https://github.com/Mintplex-Labs/anything-llm/blob/master/images/wordmark.png?raw=true" alt="AnythingLLM logo"></a>
+</p>
+
+<div align='center'>
+<a href="https://trendshift.io/repositories/2415" target="_blank"><img src="https://trendshift.io/api/badge/repositories/2415" alt="Mintplex-Labs%2Fanything-llm | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</div>
+
+<p align="center">
+    <b>AnythingLLM:</b> The all-in-one AI app you were looking for.<br />
+    Chat with your docs, use AI Agents, hyper-configurable, multi-user, & no frustrating set up required.
+</p>
+
+<p align="center">
+  <a href="https://discord.gg/6UyHPeGZAC" target="_blank">
+      <img src="https://img.shields.io/badge/chat-mintplex_labs-blue.svg?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAH1UExURQAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////r6+ubn5+7u7/3+/v39/enq6urq6/v7+97f39rb26eoqT1BQ0pOT4+Rkuzs7cnKykZKS0NHSHl8fdzd3ejo6UxPUUBDRdzc3RwgIh8jJSAkJm5xcvHx8aanqB4iJFBTVezt7V5hYlJVVuLj43p9fiImKCMnKZKUlaaoqSElJ21wcfT09O3u7uvr6zE0Nr6/wCUpK5qcnf7+/nh7fEdKTHx+f0tPUOTl5aipqiouMGtubz5CRDQ4OsTGxufn515hY7a3uH1/gXBydIOFhlVYWvX29qaoqCQoKs7Pz/Pz87/AwUtOUNfY2dHR0mhrbOvr7E5RUy8zNXR2d/f39+Xl5UZJSx0hIzQ3Odra2/z8/GlsbaGjpERHSezs7L/BwScrLTQ4Odna2zM3Obm7u3x/gKSmp9jZ2T1AQu/v71pdXkVISr2+vygsLiInKTg7PaOlpisvMcXGxzk8PldaXPLy8u7u7rm6u7S1tsDBwvj4+MPExbe4ueXm5s/Q0Kyf7ewAAAAodFJOUwAABClsrNjx/QM2l9/7lhmI6jTB/kA1GgKJN+nea6vy/MLZQYeVKK3rVA5tAAAAAWJLR0QB/wIt3gAAAAd0SU1FB+cKBAAmMZBHjXIAAAISSURBVDjLY2CAAkYmZhZWNnYODnY2VhZmJkYGVMDIycXNw6sBBbw8fFycyEoYGfkFBDVQgKAAPyMjQl5IWEQDDYgIC8FUMDKKsmlgAWyiEBWMjGJY5YEqxMAqGMWFNXAAYXGgAkYJSQ2cQFKCkYFRShq3AmkpRgYJbghbU0tbB0Tr6ukbgGhDI10gySfBwCwDUWBsYmpmDqQtLK2sbTQ0bO3sHYA8GWYGWWj4WTs6Obu4ami4OTm7exhqeHp5+4DCVJZBDmqdr7ufn3+ArkZgkJ+fU3CIRmgYWFiOARYGvo5OQUHhEUAFTkF+kVHRsLBgkIeyYmLjwoOc4hMSk5JTnINS06DC8gwcEEZ6RqZGlpOfc3ZObl5+gZ+TR2ERWFyBQQFMF5eklmqUpQb5+ReU61ZUOvkFVVXXQBSAraitq29o1GiKcfLzc29u0mjxBzq0tQ0kww5xZHtHUGeXhkZhdxBYgZ4d0LI6c4gjwd7siQQraOp1AivQ6CuAKZCDBBRQQQNQgUb/BGf3cqCCiZOcnCe3QQIKHNRTpk6bDgpZjRkzg3pBQTBrdtCcuZCgluAD0vPmL1gIdvSixUuWgqNs2YJ+DUhkEYxuggkGmOQUcckrioPTJCOXEnZ5JS5YslbGnuyVERlDDFvGEUPOWvwqaH6RVkHKeuDMK6SKnHlVhTgx8jeTmqy6Eij7K6nLqiGyPwChsa1MUrnq1wAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0xMC0wNFQwMDozODo0OSswMDowMB9V0a8AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMTAtMDRUMDA6Mzg6NDkrMDA6MDBuCGkTAAAAKHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIzLTEwLTA0VDAwOjM4OjQ5KzAwOjAwOR1IzAAAAABJRU5ErkJggg==" alt="Discord">
+  </a> |
+  <a href="https://github.com/Mintplex-Labs/anything-llm/blob/master/LICENSE" target="_blank">
+      <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=white" alt="License">
+  </a> |
+  <a href="https://docs.anythingllm.com" target="_blank">
+    Docs
+  </a> |
+   <a href="https://my.mintplexlabs.com/aio-checkout?product=anythingllm" target="_blank">
+    Hosted Instance
+  </a>
+</p>
+
+<p align="center">
+  <b>English</b> · <a href='./locales/README.zh-CN.md'>简体中文</a> · <a href='./locales/README.ja-JP.md'>日本語</a>
+</p>
+
+<p align="center">
+👉 AnythingLLM for desktop (Mac, Windows, & Linux)! <a href="https://anythingllm.com/download" target="_blank"> Download Now</a>
+</p>
+
+A full-stack application that enables you to turn any document, resource, or piece of content into context that any LLM can use as references during chatting. This application allows you to pick and choose which LLM or Vector Database you want to use as well as supporting multi-user management and permissions.
+
+![Chatting](https://github.com/Mintplex-Labs/anything-llm/assets/16845892/cfc5f47c-bd91-4067-986c-f3f49621a859)
+
+<details>
+<summary><kbd>Watch the demo!</kbd></summary>
+
+[![Watch the video](/images/youtube.png)](https://youtu.be/f95rGD9trL0)
+
+</details>
+
+### Product Overview
+
+AnythingLLM is a full-stack application where you can use commercial off-the-shelf LLMs or popular open source LLMs and vectorDB solutions to build a private ChatGPT with no compromises that you can run locally as well as host remotely and be able to chat intelligently with any documents you provide it.
+
+AnythingLLM divides your documents into objects called `workspaces`. A Workspace functions a lot like a thread, but with the addition of containerization of your documents. Workspaces can share documents, but they do not talk to each other so you can keep your context for each workspace clean.
+
+## Cool features of AnythingLLM
+
+- 🆕 [**Custom AI Agents**](https://docs.anythingllm.com/agent/custom/introduction)
+- 🖼️ **Multi-modal support (both closed and open-source LLMs!)**
+- 👤 Multi-user instance support and permissioning _Docker version only_
+- 🦾 Agents inside your workspace (browse the web, run code, etc)
+- 💬 [Custom Embeddable Chat widget for your website](./embed/README.md) _Docker version only_
+- 📖 Multiple document type support (PDF, TXT, DOCX, etc)
+- Simple chat UI with Drag-n-Drop funcitonality and clear citations.
+- 100% Cloud deployment ready.
+- Works with all popular [closed and open-source LLM providers](#supported-llms-embedder-models-speech-models-and-vector-databases).
+- Built-in cost & time-saving measures for managing very large documents compared to any other chat UI.
+- Full Developer API for custom integrations!
+- Much more...install and find out!
+
+### Supported LLMs, Embedder Models, Speech models, and Vector Databases
+
+**Large Language Models (LLMs):**
+
+- [Any open-source llama.cpp compatible model](/server/storage/models/README.md#text-generation-llm-selection)
+- [OpenAI](https://openai.com)
+- [OpenAI (Generic)](https://openai.com)
+- [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
+- [AWS Bedrock](https://aws.amazon.com/bedrock/)
+- [Anthropic](https://www.anthropic.com/)
+- [NVIDIA NIM (chat models)](https://build.nvidia.com/explore/discover)
+- [Google Gemini Pro](https://ai.google.dev/)
+- [Hugging Face (chat models)](https://huggingface.co/)
+- [Ollama (chat models)](https://ollama.ai/)
+- [LM Studio (all models)](https://lmstudio.ai)
+- [LocalAi (all models)](https://localai.io/)
+- [Together AI (chat models)](https://www.together.ai/)
+- [Fireworks AI  (chat models)](https://fireworks.ai/)
+- [Perplexity (chat models)](https://www.perplexity.ai/)
+- [OpenRouter (chat models)](https://openrouter.ai/)
+- [DeepSeek (chat models)](https://deepseek.com/)
+- [Mistral](https://mistral.ai/)
+- [Groq](https://groq.com/)
+- [Cohere](https://cohere.com/)
+- [KoboldCPP](https://github.com/LostRuins/koboldcpp)
+- [LiteLLM](https://github.com/BerriAI/litellm)
+- [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui)
+- [Apipie](https://apipie.ai/)
+- [xAI](https://x.ai/)
+- [Novita AI (chat models)](https://novita.ai/model-api/product/llm-api?utm_source=github_anything-llm&utm_medium=github_readme&utm_campaign=link)
+
+**Embedder models:**
+
+- [AnythingLLM Native Embedder](/server/storage/models/README.md) (default)
+- [OpenAI](https://openai.com)
+- [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
+- [LocalAi (all)](https://localai.io/)
+- [Ollama (all)](https://ollama.ai/)
+- [LM Studio (all)](https://lmstudio.ai)
+- [Cohere](https://cohere.com/)
+
+**Audio Transcription models:**
+
+- [AnythingLLM Built-in](https://github.com/Mintplex-Labs/anything-llm/tree/master/server/storage/models#audiovideo-transcription) (default)
+- [OpenAI](https://openai.com/)
+
+**TTS (text-to-speech) support:**
+
+- Native Browser Built-in (default)
+- [PiperTTSLocal - runs in browser](https://github.com/rhasspy/piper)
+- [OpenAI TTS](https://platform.openai.com/docs/guides/text-to-speech/voice-options)
+- [ElevenLabs](https://elevenlabs.io/)
+- Any OpenAI Compatible TTS service.
+
+**STT (speech-to-text) support:**
+
+- Native Browser Built-in (default)
+
+**Vector Databases:**
+
+- [LanceDB](https://github.com/lancedb/lancedb) (default)
+- [Astra DB](https://www.datastax.com/products/datastax-astra)
+- [Pinecone](https://pinecone.io)
+- [Chroma](https://trychroma.com)
+- [Weaviate](https://weaviate.io)
+- [Qdrant](https://qdrant.tech)
+- [Milvus](https://milvus.io)
+- [Zilliz](https://zilliz.com)
+
+### Technical Overview
+
+This monorepo consists of three main sections:
+
+- `frontend`: A viteJS + React frontend that you can run to easily create and manage all your content the LLM can use.
+- `server`: A NodeJS express server to handle all the interactions and do all the vectorDB management and LLM interactions.
+- `collector`: NodeJS express server that process and parses documents from the UI.
+- `docker`: Docker instructions and build process + information for building from source.
+- `embed`: Submodule for generation & creation of the [web embed widget](https://github.com/Mintplex-Labs/anythingllm-embed).
+- `browser-extension`: Submodule for the [chrome browser extension](https://github.com/Mintplex-Labs/anythingllm-extension).
