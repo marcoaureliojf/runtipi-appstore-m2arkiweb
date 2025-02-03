@@ -1,6 +1,6 @@
 {
-    "name": "Anythingllm",
-    "id": "anythingllm",
+    "name": "Anythingllm - Nvidia",
+    "id": "anythingllm-nvidia",
     "available": true,
     "short_desc": "The all-in-one AI application",
     "author": "Mintplex Labs",

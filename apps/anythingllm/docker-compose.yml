@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   my-app: # Should be exact same name as "id" field in config.json
-    container_name: anythingllm # Should be exact same name as "id" field in config.json
+    container_name: anythingllm-nvidia # Should be exact same name as "id" field in config.json
     image: mintplexlabs/anythingllm # Try to avoid "latest" tag. As it may break configs in the future.
     restart: unless-stopped # Do not change this
     environment:
