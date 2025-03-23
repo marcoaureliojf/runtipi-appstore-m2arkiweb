@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   invokeai: # Should be exact same name as "id" field in config.json
     container_name: invokeai # Should be exact same name as "id" field in config.json
