@@ -1,0 +1,17 @@
+{
+    "name": "SDNEXT",
+    "id": "sdnext",
+    "available": true,
+    "short_desc": "SD.Next: All-in-one for AI generative image",
+    "author": "Vladimir Mandic",
+    "port": 7860,
+    "categories": ["ai"],
+    "description": "Image Diffusion implementation with advanced features",
+    "tipi_version": 3,
+    "version": " v3.8.4",
+    "source": "https://github.com/vladmandic/sdnext",
+    "exposable": true,
+    "supported_architectures": ["amd64"],
+    "created_at": 1742738400000 ,
+    "updated_at": 1742738400000 
+  }
