@@ -1,0 +1,17 @@
+{
+    "name": "Wolf Nvidia",
+    "id": "wolf-nvidia",
+    "available": true,
+    "short_desc": "Stream virtual desktops and games running in Docker",
+    "author": "Games on Whales",
+    "port": 47989,
+    "categories": ["gaming"],
+    "description": "Wolf is a streaming server for Moonlight that allows you to share a single server with multiple remote clients in order to play videogames!",
+    "tipi_version": 1,
+    "version": "v2024.07",
+    "source": "https://github.com/games-on-whales/wolf",
+    "exposable": true,
+    "supported_architectures": ["amd64"],
+    "created_at": 1724134338800,
+    "updated_at": 1724134338800
+  }
