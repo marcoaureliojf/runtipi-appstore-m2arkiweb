@@ -1,6 +1,6 @@
 {
     "name": "Wolf Nvidia",
-    "id": "wolf-nvidia",
+    "id": "wolf",
     "available": true,
     "short_desc": "Stream virtual desktops and games running in Docker",
     "author": "Games on Whales",
