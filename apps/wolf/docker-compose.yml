@@ -15,6 +15,7 @@ services:
       - "47998-48000:47998-48000/udp"  
     volumes:
       - ${APP_DATA_DIR}/data/config/wolf/:/etc/wolf
+      - ${APP_DATA_DIR}/data/config/home:/home
       - /tmp/sockets:/tmp/sockets:rw
       - /var/run/docker.sock:/var/run/docker.sock:rw
       - /dev/:/dev/:rw
