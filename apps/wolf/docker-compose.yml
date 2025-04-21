@@ -1,6 +1,6 @@
 services:
-  wolf:
-    container_name: wolf
+  wolf-nvidia:
+    container_name: wolf-nvidia
     image: ghcr.io/games-on-whales/wolf:stable
     environment:
       - XDG_RUNTIME_DIR=/tmp/sockets
@@ -8,6 +8,11 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=all
       - NVIDIA_VISIBLE_DEVICES=all
       - TZ=${TZ}
+    ipc: host
+    ports:
+      - "47984-47990:47984-47990/tcp"
+      - "48010:48010"
+      - "47998-48000:47998-48000/udp"  
     volumes:
       - ${APP_DATA_DIR}/data/config/wolf/:/etc/wolf
       - /tmp/sockets:/tmp/sockets:rw
