@@ -12,6 +12,7 @@
     "source": "https://github.com/Mintplex-Labs/anything-llm",
     "exposable": true,
     "supported_architectures": ["arm64", "amd64"],
+    "dynamic_config": true,
     "created_at": 1738541029,
     "updated_at": 1738541029
   }
