@@ -1,0 +1,25 @@
+{
+  "$schema": "../dynamic-compose-schema.json",
+  "services": [
+    {
+      "name": "wolf",
+      "internalPort": 48010,
+      "addPorts": [
+        {
+          "hostPort": "47984-47990",
+          "containerPort": "47984-47990",
+          "tcp": true,
+          "udp": false
+        },
+        {
+          "hostPort": "47998-48000",
+          "containerPort": "47998-48000",
+          "tcp": false,
+          "udp": true
+        }
+      ],
+      "image": "hcr.io/games-on-whales/wolf:stable",
+      "isMain": true
+    }
+  ]
+}

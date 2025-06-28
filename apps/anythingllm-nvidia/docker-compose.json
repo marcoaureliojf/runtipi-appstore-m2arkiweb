@@ -1,0 +1,14 @@
+{
+  "$schema": "../dynamic-compose-schema.json",
+  "services": [
+    {
+      "name": "anythingllm",
+      "environment": {
+        "PORT": "3001"
+      },
+      "image": "mintplexlabs/anythingllm",
+      "internalPort": 3001,
+      "isMain": true
+    }
+  ]
+}

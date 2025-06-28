@@ -13,6 +13,7 @@
     "website": "https://invoke-ai.github.io/InvokeAI/",
     "exposable": true,
     "supported_architectures": ["arm64", "amd64"],
+    "dynamic_config": true,
     "created_at": 1724134338800,
     "updated_at": 1756162380000
   }

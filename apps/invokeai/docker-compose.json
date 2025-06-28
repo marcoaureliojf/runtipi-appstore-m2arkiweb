@@ -1,0 +1,14 @@
+{
+  "$schema": "../dynamic-compose-schema.json",
+  "services": [
+    {
+      "name": "invokeai",
+      "environment": {
+        "PORT": "9090"
+      },
+      "image": "ghcr.io/invoke-ai/invokeai:v5.15.0-cuda",
+      "internalPort": 9090,
+      "isMain": true
+    }
+  ]
+}
