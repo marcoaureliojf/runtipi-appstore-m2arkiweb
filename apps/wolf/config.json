@@ -11,21 +11,6 @@
     "version": "v2024.07",
     "source": "https://github.com/games-on-whales/wolf",
     "exposable": true,
-    "form_fields": [
-      {
-        "type": "text",
-        "label": "You must change these. Replace `postiz.your-server.com` with your DNS name - what your web browser sees.",
-        "placeholder": "https://postiz.your-server.com",
-        "required": true,
-        "env_variable": "POSTIZ_DOMAIN"
-      },
-      {
-        "type": "random",
-        "label": "JWT_SECRET",
-        "min": 50,
-        "env_variable": "JWT_SECRET_KEY"
-      }
-    ],
     "supported_architectures": ["amd64"],
     "dynamic_config": true,
     "created_at": 1724134338800,
