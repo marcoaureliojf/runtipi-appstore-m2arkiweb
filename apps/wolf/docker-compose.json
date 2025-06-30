@@ -3,9 +3,122 @@
   "services": [
     {
       "name": "wolf",
+      "image": "ghcr.io/games-on-whales/wolf:stable",
+      "containerName": "wolf",
+      "isMain": true,
+      "environment": {
+        "XDG_RUNTIME_DIR": "/tmp/sockets",
+        "HOST_APPS_STATE_FOLDER": "/home/wolf",
+        "NVIDIA_DRIVER_CAPABILITIES": "all",
+        "NVIDIA_VISIBLE_DEVICES": "all",
+        "TZ": "${TZ}"
+      },
+      "ipc": "host",
       "networkMode": "host",
-      "image": "hcr.io/games-on-whales/wolf:stable",
-      "isMain": true
+      "restartPolicy": "unless-stopped",
+      "runtime": "nvidia",
+      "ports": [
+        {
+          "hostPort": 47984,
+          "containerPort": 47984,
+          "protocol": "tcp"
+        },
+        {
+          "hostPort": 47985,
+          "containerPort": 47985,
+          "protocol": "tcp"
+        },
+        {
+          "hostPort": 47986,
+          "containerPort": 47986,
+          "protocol": "tcp"
+        },
+        {
+          "hostPort": 47987,
+          "containerPort": 47987,
+          "protocol": "tcp"
+        },
+        {
+          "hostPort": 47988,
+          "containerPort": 47988,
+          "protocol": "tcp"
+        },
+        {
+          "hostPort": 47989,
+          "containerPort": 47989,
+          "protocol": "tcp"
+        },
+        {
+          "hostPort": 47990,
+          "containerPort": 47990,
+          "protocol": "tcp"
+        },
+        {
+          "hostPort": 48010,
+          "containerPort": 48010,
+          "protocol": "tcp"
+        },
+        {
+          "hostPort": 47998,
+          "containerPort": 47998,
+          "protocol": "udp"
+        },
+        {
+          "hostPort": 47999,
+          "containerPort": 47999,
+          "protocol": "udp"
+        },
+        {
+          "hostPort": 48000,
+          "containerPort": 48000,
+          "protocol": "udp"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/wolf",
+          "containerPath": "/home/wolf"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/cfg",
+          "containerPath": "/etc/wolf/cfg"
+        },
+        {
+          "hostPath": "/tmp/sockets",
+          "containerPath": "/tmp/sockets"
+        },
+        {
+          "hostPath": "/var/run/docker.sock",
+          "containerPath": "/var/run/docker.sock"
+        },
+        {
+          "hostPath": "/dev/",
+          "containerPath": "/dev/"
+        },
+        {
+          "hostPath": "/run/udev",
+          "containerPath": "/run/udev"
+        }
+      ],
+      "devices": [
+        "/dev/dri",
+        "/dev/uinput",
+        "/dev/uhid"
+      ],
+      "deviceCgroupRules": [
+        "c 13:* rmw"
+      ],
+      "deploy": {
+        "resources": {
+          "reservations": {
+            "devices": [
+              {
+                "capabilities": ["gpu"]
+              }
+            ]
+          }
+        }
+      }
     }
   ]
 }
