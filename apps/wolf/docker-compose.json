@@ -7,7 +7,6 @@
       "containerName": "wolf",
       "isMain": true,
       "environment": {
-        "XDG_RUNTIME_DIR": "/tmp/sockets",
         "HOST_APPS_STATE_FOLDER": "/home/wolf",
         "NVIDIA_DRIVER_CAPABILITIES": "all",
         "NVIDIA_VISIBLE_DEVICES": "all",
@@ -82,10 +81,6 @@
         {
           "hostPath": "${APP_DATA_DIR}/cfg",
           "containerPath": "/etc/wolf/cfg"
-        },
-        {
-          "hostPath": "/tmp/sockets",
-          "containerPath": "/tmp/sockets"
         },
         {
           "hostPath": "/var/run/docker.sock",
