@@ -3,7 +3,6 @@ services:
     container_name: wolf
     image: ghcr.io/games-on-whales/wolf:stable
     environment:
-      - XDG_RUNTIME_DIR=/tmp/sockets
       - HOST_APPS_STATE_FOLDER=/home/wolf
       - NVIDIA_DRIVER_CAPABILITIES=all
       - NVIDIA_VISIBLE_DEVICES=all
@@ -16,7 +15,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/wolf:/home/wolf
       - ${APP_DATA_DIR}/cfg:/etc/wolf/cfg
-      - /tmp/sockets:/tmp/sockets:rw
       - /var/run/docker.sock:/var/run/docker.sock:rw
       - /dev/:/dev/:rw
       - /run/udev:/run/udev:rw
